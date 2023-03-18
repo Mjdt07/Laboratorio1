@@ -1,34 +1,50 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
+void LimpiarPantalla(){
+	
+	printf ("\nFuncion para mostrar el uso del void");
+	printf ("\n---------------------------------");
+	
+	
+	int si;
+	printf("\nDesea limpiar la pantalla? Presione 1 si lo desea o 2 si no lo desea:");
+	scanf("%d", &si);
+	
+	if (si==1){
+		
+		system ("cls");
+		
+	}else{
+		
+		printf("No se han borrado los datos");
+		
+	}
+	
+}
+
+
+
 int main(){
 	
-	float numero1, suma, multip, divis, resta;
-	int numero2;
-	
-	int semilla = time(NULL);
+	printf("Datos basicos");
+	printf("\n-------------");
 
-	srand(semilla);
-		numero2= rand()%10;
-		printf("El numero aleatorio es:%d", numero2);
+	char nombre [50]= "Manuela Duarte";
+		printf("\nNombre (Tipo char): %s", nombre);
 	
-	
-	printf("\nIngrese un numero:");
-		scanf("%f", &numero1);
-	
+	int edad = 19;
+		printf("\nEdad (Tipo entero): %d", edad);	
+		
+	float peso = 49.556	;
+		printf("\nPeso (Tipo float): %.2f", peso);
 
-	suma = numero1 + numero2;
-		printf ("La suma entre los dos numeros es: %.2f",suma); 
-	
-	
-	resta  = numero1 - numero2;
-		printf ("\nLa resta entre los dos numeros es: %.2f",resta); 
-	
-	multip = numero1 * numero2;
-		printf ("\nLa multiplicacion entre los dos numeros es: %.2f",multip); 	
-	
-	divis = numero2 / numero1;
-		printf ("\nLa division entre los dos numeros es: %.2f",divis); 
+
+	double pi = 3.14159265359	;
+		printf("\nNumero favorito (Tipo double): %.10f", pi);
+
+	LimpiarPantalla();
 	
 	return 0;
 }
